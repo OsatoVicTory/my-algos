@@ -10,11 +10,11 @@ const maxSumCircularSubarray = (arr) => {
     for(var i=0;i<n;i++) {
         total += arr[i];
 
-        cur_max_sum = Math.max(arr[i], cur_max_sum + a[i]);
+        cur_max_sum = Math.max(arr[i], cur_max_sum + arr[i]);
         max_sum = Math.max(cur_max_sum, max_sum);
 
         if(i>0 && i<n-1) {
-            cur_min_sum = Math.min(arr[i], cur_min_sum + a[i]);
+            cur_min_sum = Math.min(arr[i], cur_min_sum + arr[i]);
             min_sum = Math.min(cur_min_sum, min_sum);
         }
     }
